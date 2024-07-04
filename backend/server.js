@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
 })
 
 // work here:
-app.get('/comedy', (req, res) => {
-  const funny = [
+app.get('/jokes', (req, res) => {
+  const jokes = [
     { id: 1, title: 'Fun 1', comment: 'Comment here...' },
     { id: 2, title: 'Fun 2', comment: 'Comment here...' },
     { id: 3, title: 'Fun 3', comment: 'Comment here...' },
@@ -27,7 +27,7 @@ app.get('/comedy', (req, res) => {
     { id: 15, title: 'Fun 15', comment: 'Comment here...' },
   ]
 
-  res.send(funny)
+  res.send(jokes)
 
 })
 
