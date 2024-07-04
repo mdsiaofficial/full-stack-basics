@@ -6,35 +6,23 @@ const hospitalSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-
-  },
-  diagonsedWith: {
-    type: String,
-    required: true,
   },
   address: {
     type: String,
-    required: true,
   },
-  age: {
-    type: Number,
-    required: true,
-  },
-  bloodGroup: {
+  city: {
     type: String,
-    enum: ["O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-",],
-    required: true,
+    required:true,
   },
-  gender: {
+  pincode: {
     type: String,
-    enum: ["Male", "Female", "Other"],
-    required: true
-  },
-  admittedIn: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Hospital",
     required: true,
-  }
+  },
+  specializedIn: [
+    {
+      type: String,
+    },
+  ],
 }, { timestamps: true })
 
 

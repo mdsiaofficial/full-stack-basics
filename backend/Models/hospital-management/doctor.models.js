@@ -2,7 +2,7 @@ import mongoose from `mongoose`;
 
 
 
-const doctorSchema = new mongoose.Schema({ 
+const doctorSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -18,7 +18,14 @@ const doctorSchema = new mongoose.Schema({
   experience: {
     type: Number,
     required: true,
-  }
+  },
+  worksInHospitals: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Hospital',
+    },
+
+  ]
 }, { timestamps: true })
 
 
