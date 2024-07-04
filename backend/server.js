@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 })
 
 // work here:
-app.get('/jokes', (req, res) => {
+app.get('/api/jokes', (req, res) => {
   const jokes = [
     { id: 1, title: 'Fun 1', comment: 'Comment here...' },
     { id: 2, title: 'Fun 2', comment: 'Comment here...' },
